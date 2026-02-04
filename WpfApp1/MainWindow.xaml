@@ -21,19 +21,19 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Rectangle Height="50" Width="500" Fill="White" Stroke="Black" Grid.ColumnSpan="3" Grid.RowSpan="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Rectangle x:Name="ColorRectangle" Height="50" Width="500" Fill="White" Stroke="Black" Grid.ColumnSpan="3" Grid.RowSpan="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Label Content="R" Grid.Row="2" Width="26" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label Content="G" Grid.Row="3" Width="30" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label Content="B" Grid.Row="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Content="255" Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Content="255" Grid.Row="3" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label Content="255" Grid.Row="4" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Slider Margin="10" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" Value="255" Maximum="255"/>
-        <Slider Margin="10" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" Value="255" Maximum="255"/>
-        <Slider Margin="10" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" Value="255" Maximum="255"/>
+        <Label x:Name="RedNumberValue" Content="255" Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="GreenNumberValue" Content="255" Grid.Row="3" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="BlueNumberValue" Content="255" Grid.Row="4" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Slider x:Name="RedSlider" Margin="10" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" Value="255" Maximum="255"/>
+        <Slider x:Name="GreenSlider" Margin="10" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" Value="255" Maximum="255"/>
+        <Slider x:Name="BlueSlider" Margin="10" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Center" Value="255" Maximum="255"/>
         <Label Content="Dobierz kolor suwakami i zatwierdź przyciskiem:" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1"/>
-        <Button Background="Peru" Margin="10" Content="Pobierz" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalContentAlignment="Center" Width="200" HorizontalContentAlignment="Center"/>
-        <Label Content="255,255,255" Background="White" Grid.Column="1" Grid.Row="6" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
+        <Button x:Name="PobierzButton" Background="Peru" Margin="10" Content="Pobierz" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalContentAlignment="Center" Width="200" HorizontalContentAlignment="Center" Click="PobierzButton_Clicked"/>
+        <Label x:Name="RGBNumberValue" Content="255, 255, 255" Background="White" Grid.Column="1" Grid.Row="6" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>
